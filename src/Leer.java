@@ -29,6 +29,7 @@ public class Leer {
     private ArrayList<SensorElectrico> datosElect = new ArrayList<>();
 
     public void leer() throws FileNotFoundException {
+        int control = 0;
         Scanner input = new Scanner(new File("datos.txt"));
         while (input.hasNext()) {
             nombre = input.next();
@@ -39,6 +40,7 @@ public class Leer {
             for (int i = 0; i < numeroEstacions; i++) {
                 nombreEstaciones[i] = input.nextInt();
                 numeroDatos = input.nextInt();
+                control += numeroDatos;
 
                 for (int j = 0; j < numeroDatos; j++) {
                     fechaTomaDatos.add(input.next());
@@ -48,7 +50,7 @@ public class Leer {
 
                 }
             }
-            for (int i = 0; i < 3; i++) {
+            for (int i = 0; i < control; i++) {
                 datosAgua.add(new SensorAgua(cantidadAgua.get(i)));
                 datosTemp.add(new SensorTemperatura(temperatura.get(i)));
                 datosElect.add(new SensorElectrico(nivelElectrico.get(i)));
