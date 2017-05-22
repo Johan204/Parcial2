@@ -27,9 +27,9 @@ public class Leer {
     private ArrayList<SensorAgua> datosAgua = new ArrayList<>();
     private ArrayList<SensorTemperatura> datosTemp = new ArrayList<>();
     private ArrayList<SensorElectrico> datosElect = new ArrayList<>();
-
+    private int control = 0;
     public void leer() throws FileNotFoundException {
-        int control = 0;
+        
         Scanner input = new Scanner(new File("datos.txt"));
         while (input.hasNext()) {
             nombre = input.next();
@@ -64,7 +64,7 @@ public class Leer {
         for (int i = 0; i < datosAgua.size(); i++) {
             numero += datosAgua.get(i).getCantidadAgua() + datosTemp.get(i).getTemperatura() + datosElect.get(i).getNivelCarga();
         }
-        numero = numero / (3 * datosAgua.size());
+        numero = numero / (control * datosAgua.size());
         System.out.println("El promedio de todos los datos medidos es de " + numero);
     }
 }
