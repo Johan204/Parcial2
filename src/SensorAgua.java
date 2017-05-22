@@ -16,8 +16,9 @@ public class SensorAgua extends Sensores {
         this.cantidadAgua = cantidadAgua;
     }
 
-    public SensorAgua(int cantidadAgua) {
+    public SensorAgua(int cantidadAgua, String fechaTomaMedida) {
         this.cantidadAgua = cantidadAgua;
+        this.fechaTomaMedida = fechaTomaMedida;
     }
     
     

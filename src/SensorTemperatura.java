@@ -16,8 +16,9 @@ public class SensorTemperatura extends Sensores{
         this.temperatura = temperatura;
     }
 
-    public SensorTemperatura(int temperatura) {
+    public SensorTemperatura(int temperatura, String fechaTomaMedida) {
         this.temperatura = temperatura;
+        this.fechaTomaMedida = fechaTomaMedida;
     }
     
     

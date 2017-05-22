@@ -28,6 +28,7 @@ public class Leer {
     private ArrayList<SensorTemperatura> datosTemp = new ArrayList<>();
     private ArrayList<SensorElectrico> datosElect = new ArrayList<>();
     private ArrayList<EstacionMet> estaciones = new ArrayList<>();
+    
     private int control = 0;
     public void leer() throws FileNotFoundException {
         
@@ -53,9 +54,9 @@ public class Leer {
                 }
             }
             for (int i = 0; i < control; i++) {
-                datosAgua.add(new SensorAgua(cantidadAgua.get(i)));
-                datosTemp.add(new SensorTemperatura(temperatura.get(i)));
-                datosElect.add(new SensorElectrico(nivelElectrico.get(i)));
+                datosAgua.add(new SensorAgua(cantidadAgua.get(i),fechaTomaDatos.get(i)));
+                datosTemp.add(new SensorTemperatura(temperatura.get(i),fechaTomaDatos.get(i)));
+                datosElect.add(new SensorElectrico(nivelElectrico.get(i),fechaTomaDatos.get(i)));
             }
         }
 

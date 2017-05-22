@@ -19,8 +19,9 @@ public class SensorElectrico extends Sensores {
     public SensorElectrico() {
     }
 
-    public SensorElectrico(int nivelCarga) {
+    public SensorElectrico(int nivelCarga, String fechaTomaMedida) {
         this.nivelCarga = nivelCarga;
+        this.fechaTomaMedida = fechaTomaMedida;
     }
 
     public int getNivelCarga() {

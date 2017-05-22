@@ -34,6 +34,10 @@ public abstract class Sensores {
     public String getFechaInstalacionSensor() {
         return fechaTomaMedida;
     }
+
+    public void setFechaTomaMedida(String fechaTomaMedida) {
+        this.fechaTomaMedida = fechaTomaMedida;
+    }
     
     
 }
