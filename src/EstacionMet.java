@@ -10,23 +10,23 @@
  */
 public class EstacionMet {
 
-    protected String nombreEstacion;
+    protected int nombreEstacion;
     protected String ubicacion;
     protected String fechaInstalacion;
     protected Sensores sensores;
 
-    public EstacionMet(String nombreEstacion, String ubicacion, String fechaInstalacion) {
+    public EstacionMet(int nombreEstacion, String ubicacion, String fechaInstalacion) {
         this.nombreEstacion = nombreEstacion;
         this.ubicacion = ubicacion;
         this.fechaInstalacion = fechaInstalacion;
     }
 
-    public EstacionMet(String nombreEstacion) {
+    public EstacionMet(int nombreEstacion) {
         this.nombreEstacion = nombreEstacion;
     }
     
 
-    public String getNombreEstacion() {
+    public int getNombreEstacion() {
         return nombreEstacion;
     }
 
